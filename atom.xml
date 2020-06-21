@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tim&#39;s Blog</title>
+  
+  <subtitle>加油，冲冲冲...</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://zouchanglin.cn/"/>
+  <updated>2020-06-17T13:36:19.391Z</updated>
+  <id>https://zouchanglin.cn/</id>
+  
+  <author>
+    <name>邹长林</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Cloud Bus自动刷新配置</title>
+    <link href="https://zouchanglin.cn/2020/06/17/SpringCloudBus%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E9%85%8D%E7%BD%AE/"/>
+    <id>https://zouchanglin.cn/2020/06/17/SpringCloudBus%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-06-17T05:25:00.000Z</published>
+    <updated>2020-06-17T13:36:19.391Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在之前的文章中，我讲述了统一配置中心（服务端和客户端）的基本使用，并且演示了从配置Git仓库到拉取配置的整个流程，请见&lt;a href=&quot;http://zouchanglin.cn/2020/06/17/统一配置中心&quot;&gt;《统一配置中心》&lt;/a&gt;这篇博客。在该博客中我们说到了，统一配置中心还有个好处就是动态更新配置文件，而无需手动重启服务，但是并没有演示或者实现。本文将记述如何通过Spring Cloud Bus自动刷新配置，以及自动刷新的原理。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="微服务架构" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="SpringCloud" scheme="https://zouchanglin.cn/tags/SpringCloud/"/>
+    
+      <category term="配置中心" scheme="https://zouchanglin.cn/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统一配置中心</title>
+    <link href="https://zouchanglin.cn/2020/06/17/%E7%BB%9F%E4%B8%80%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/"/>
+    <id>https://zouchanglin.cn/2020/06/17/%E7%BB%9F%E4%B8%80%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</id>
+    <published>2020-06-17T01:25:00.000Z</published>
+    <updated>2020-06-17T13:34:51.867Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们之前做单体应用的时候是直接把配置写在application.yml中，但是如果是采用微服务架构的模式进行开发，这样的方式会存在哪些问题呢？首先维护困难、安全因素、更新配置时项目需要重启等等。针对这些问题，本文主要讲述的就是Spring cloud config这个组件，使用该组件可以很好的处理如下问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="微服务架构" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="SpringCloud" scheme="https://zouchanglin.cn/tags/SpringCloud/"/>
+    
+      <category term="配置中心" scheme="https://zouchanglin.cn/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Feign与项目多模块</title>
+    <link href="https://zouchanglin.cn/2020/06/16/Feign%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%A4%9A%E6%A8%A1%E5%9D%97/"/>
+    <id>https://zouchanglin.cn/2020/06/16/Feign%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%A4%9A%E6%A8%A1%E5%9D%97/</id>
+    <published>2020-06-16T04:25:00.000Z</published>
+    <updated>2020-06-16T13:58:12.269Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本篇文章主要是记录了Feign的使用方式，并且重点讲述了使用Maven构建多模块项目，从而更好地适应微服务架构的软件开发模式。在服务调用的场景中，我们经常调用基于HTTP协议的服务，Feign封装了Http调用流程，更适合面向接口化的变成习惯。Feign底层使用了Ribbon作为负载均衡的客户端，而有关Ribbon的负载均衡的实现请见&lt;a href=&quot;https://zouchanglin.cn/2020/05/15/RestTemplate与负载均衡器/&quot;&gt;《RestTemplate与负载均衡器》&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="微服务架构" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="消息通信" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1/"/>
+    
+    
+      <category term="SpringCloud" scheme="https://zouchanglin.cn/tags/SpringCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RestTemplate与负载均衡器</title>
+    <link href="https://zouchanglin.cn/2020/05/15/RestTemplate%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%99%A8/"/>
+    <id>https://zouchanglin.cn/2020/05/15/RestTemplate%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%99%A8/</id>
+    <published>2020-05-15T10:25:00.000Z</published>
+    <updated>2020-06-15T16:39:28.881Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要是介绍SpringCloud构建微服务系统的Ribbon负载均衡器和网络请求框架RestTemplate，另外将会分析负载均衡器的源码，通过实例证明如何通过Ribbon和RestTemplate相结合实现负载均衡。现在假设有一个分布式系统，该系统由在不同计算机上运行的许多服务组成。当用户数量很大时，通常会为服务创建多个副本。每个副本都在另一台计算机上运行，此时有助于在服务器之间平均分配传入流量。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="微服务架构" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="负载均衡" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
+    
+      <category term="消息通信" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1/"/>
+    
+    
+      <category term="SpringCloud" scheme="https://zouchanglin.cn/tags/SpringCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务拆分方法论</title>
+    <link href="https://zouchanglin.cn/2020/05/14/%E6%9C%8D%E5%8A%A1%E6%8B%86%E5%88%86%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    <id>https://zouchanglin.cn/2020/05/14/%E6%9C%8D%E5%8A%A1%E6%8B%86%E5%88%86%E6%96%B9%E6%B3%95%E8%AE%BA/</id>
+    <published>2020-05-14T10:25:00.000Z</published>
+    <updated>2020-05-14T11:38:09.780Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;微服务是当下非常热门的话题，微服务发展到现在，已经不再单单局限于微服务架构本身，还与容器化、DevOps等新的理念相结合，成为当前移动互联网时代最先进的业务架构解决方案，能更好地迎合移动互联网业务快速迭代的要求。 本篇文章中我主要探讨的是什么时候适合微服务改造，如何做服务拆分等问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="微服务架构" scheme="https://zouchanglin.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="软件工程" scheme="https://zouchanglin.cn/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件工程方法之DevOps</title>
+    <link href="https://zouchanglin.cn/2020/05/14/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%96%B9%E6%B3%95%E4%B9%8BDevOps/"/>
+    <id>https://zouchanglin.cn/2020/05/14/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%96%B9%E6%B3%95%E4%B9%8BDevOps/</id>
+    <published>2020-05-14T00:25:00.000Z</published>
+    <updated>2020-05-14T04:39:40.708Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们经常看到DevOps这个词，那么DevOps究竟是什么呢？DevOps 是一种软件开发方法。它将持续开发、持续测试、持续集成、持续部署和持续监控贯穿于软件开发的整个生命周期。当前几乎所有的顶尖公司均采用了该方法，用以提高软件开发质量，并缩短软件开发生命周期。从而以达到每个公司对软件产品的期望，交付出客户最满意的产品。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="https://zouchanglin.cn/categories/DevOps/"/>
+    
+    
+      <category term="Jenkins" scheme="https://zouchanglin.cn/tags/Jenkins/"/>
+    
+      <category term="软件工程" scheme="https://zouchanglin.cn/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Eureka的高可用</title>
+    <link href="https://zouchanglin.cn/2020/05/13/Eureka%E7%9A%84%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    <id>https://zouchanglin.cn/2020/05/13/Eureka%E7%9A%84%E9%AB%98%E5%8F%AF%E7%94%A8/</id>
+    <published>2020-05-13T00:25:00.000Z</published>
+    <updated>2020-06-15T15:06:19.173Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Eureka是Netfilx开源的服务发现组件，本身是一个基于REST的服务。它包含EurekaServer和EurekaClient两部分，SpringCloud将它集成在子项目Spring Cloud Netfilx中，实现了微服务的注册与发现。 Eureka作为服务注册中心对整个微服务架构起着最核心的整合作用。 Eureka简单来讲就是Netflix开源的一款提供服务注册和发现的产品，Spring Cloud Netflix提供的胶水代码更换了一些初始化配置，并增加了更人性化的界面，可以这样理解，Spring Cloud Netflix让Eureka更简单易用，下面我们看看如何实现Eureka的高可用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web开发" scheme="https://zouchanglin.cn/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="JavaEE" scheme="https://zouchanglin.cn/tags/JavaEE/"/>
+    
+      <category term="SpringCloud" scheme="https://zouchanglin.cn/tags/SpringCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义SpringBootStarter</title>
+    <link href="https://zouchanglin.cn/2020/05/05/%E8%87%AA%E5%AE%9A%E4%B9%89SpringBootStarter/"/>
+    <id>https://zouchanglin.cn/2020/05/05/%E8%87%AA%E5%AE%9A%E4%B9%89SpringBootStarter/</id>
+    <published>2020-05-05T00:25:00.000Z</published>
+    <updated>2020-05-05T10:30:06.821Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在日常使用SpringBoot的开发中，我们想要引入某个组件，几乎都是直接引入一个SpringBootStarter就完事，什么配置文件大发布分省略甚至是完全省略的。在前面的文章中，我们分析了SpringBoot的具体启动流程&lt;a href=&quot;https://zouchanglin.cn/2020/04/25/SpringBoot启动流程探究&quot;&gt;《 SpringBoot启动流程探究 》&lt;/a&gt;、以及SpringBoot自动配置的原理 &lt;a href=&quot;https://zouchanglin.cn/2020/04/06/SpringBoot自动配置原理&quot;&gt;《 SpringBoot自动配置原理 》&lt;/a&gt; 。通过这两篇文章其实很容易弄清楚那些官方的starter是如何运行起来的，并且我们可以制作一个自己的SpringBootStarter，并且我会把自制的SpringBootStarter推送到公服，本篇文章会记录一个完整的开发流程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web开发" scheme="https://zouchanglin.cn/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="JavaEE" scheme="https://zouchanglin.cn/tags/JavaEE/"/>
+    
+      <category term="SpringBoot" scheme="https://zouchanglin.cn/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring如何解决循环依赖</title>
+    <link href="https://zouchanglin.cn/2020/04/28/Spring%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/"/>
+    <id>https://zouchanglin.cn/2020/04/28/Spring%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/</id>
+    <published>2020-04-28T00:25:00.000Z</published>
+    <updated>2020-04-28T04:37:59.087Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Spring如何解决循环依赖是经常会被面试官问到的一个问题，这个问题算是关于Spring的一个高频面试题，因为如果不刻意研读，相信即使读过源码，面试者也不一定能够一下子思考出其中的原理。本文主要针对这个问题，从源码的角度对其实现原理进行讲解，彻底搞懂Spring究竟是如何解决循环依赖的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web开发" scheme="https://zouchanglin.cn/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="JavaEE" scheme="https://zouchanglin.cn/tags/JavaEE/"/>
+    
+      <category term="SpringCore" scheme="https://zouchanglin.cn/tags/SpringCore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot启动流程探究</title>
+    <link href="https://zouchanglin.cn/2020/04/25/SpringBoot%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E6%8E%A2%E7%A9%B6/"/>
+    <id>https://zouchanglin.cn/2020/04/25/SpringBoot%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E6%8E%A2%E7%A9%B6/</id>
+    <published>2020-04-25T10:00:00.000Z</published>
+    <updated>2020-04-25T11:04:18.362Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Spring的丰富生态备受开发者青睐，尤其是自从SpringBoot出现之后去掉了原来的复杂配置，因为SpringBoot的理念就是&lt;code&gt;约定大于配置&lt;/code&gt;，这让我们省去了很多需要手动配置的过程，就拿SpringMVC来说吧各种XML配置直接劝退初学者，但是SpringBoot的易用性简直是成为了推广Spring生态的利器。本篇文章主要是结合SpringBoot的源码，来探究SpringBoot应用程序的启动流程！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web开发" scheme="https://zouchanglin.cn/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="JavaEE" scheme="https://zouchanglin.cn/tags/JavaEE/"/>
+    
+      <category term="SpringBoot" scheme="https://zouchanglin.cn/tags/SpringBoot/"/>
+    
+      <category term="SpringCore" scheme="https://zouchanglin.cn/tags/SpringCore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>索引堆的实现与优化</title>
+    <link href="https://zouchanglin.cn/2020/04/24/%E7%B4%A2%E5%BC%95%E5%A0%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BC%98%E5%8C%96/"/>
+    <id>https://zouchanglin.cn/2020/04/24/%E7%B4%A2%E5%BC%95%E5%A0%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BC%98%E5%8C%96/</id>
+    <published>2020-04-24T10:00:00.000Z</published>
+    <updated>2020-04-25T10:52:36.021Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在之前文章中记述了堆的实现（插入方式建堆、heapify方式建堆以及堆排序）&lt;a href=&quot;https://zouchanglin.cn/2020/04/13/堆的实现及其应用&quot;&gt;《 堆的实现及其应用 》&lt;/a&gt;。今天来看看索引堆是个什么东西，对于我们所关心的这个数组而言，数组中的元素位置发生了改变。正是因为这些元素的位置发生了改变，我们才能将其构建为最大堆。 如果元素十分复杂的话，比如像每个位置上存的是一篇上万字的文章。那么交换它们之间的位置将产生大量的时间消耗。并且由于数组元素的位置在构建成堆之后发生了改变，那么我们就很难索引到它，很难去改变它。可以在每一个元素上再加上一个属性来表示原来的位置可以解决，但是这样的话，必须将这个数组遍历一下才能解决。针对以上问题，我们就需要引入索引堆（Index Heap）的概念。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据结构与算法" scheme="https://zouchanglin.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="堆" scheme="https://zouchanglin.cn/tags/%E5%A0%86/"/>
+    
+      <category term="二叉树" scheme="https://zouchanglin.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是可中断锁</title>
+    <link href="https://zouchanglin.cn/2020/04/23/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E4%B8%AD%E6%96%AD%E9%94%81/"/>
+    <id>https://zouchanglin.cn/2020/04/23/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E4%B8%AD%E6%96%AD%E9%94%81/</id>
+    <published>2020-04-23T10:00:00.000Z</published>
+    <updated>2020-04-23T11:48:46.816Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lock是可中断锁，而synchronized不是可中断锁。现假设线程A和B都要获取对象O的锁定，假设A获取了对象O锁，B将等待A释放对O的锁定，如果使用synchronized，如果A不释放，B将一直等下去，不能被中断；如果使用ReentrantLock，如果A不释放，可以使B在等待了足够长的时间以后，中断等待，而干别的事情。获取锁超时机制还是属于不可中断，属于超时被动放弃去竞争锁，而lockInterruptibly是可主动放弃竞争锁行为的一种方式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="并发编程" scheme="https://zouchanglin.cn/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="JavaSE" scheme="https://zouchanglin.cn/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDK11新特性</title>
+    <link href="https://zouchanglin.cn/2020/04/17/JDK11%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    <id>https://zouchanglin.cn/2020/04/17/JDK11%E6%96%B0%E7%89%B9%E6%80%A7/</id>
+    <published>2020-04-17T10:00:00.000Z</published>
+    <updated>2020-04-20T06:14:53.785Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Oracle官方于2018年9月26日宣布Java11正式发布。目前Oracle 官方也已经宣布Java11正式可以商用，这是Java 大版本周期变化后的第一个长期支持版本，非常值得关注。最新发布的Java11一共包含17个JEP（JDK Enhancement Proposals，JDK 增强提案）。对于企业来说，选择Java11将意味着长期的、可靠的、可预测的技术路线图。其中免费的OpenJDK11确定将得到OpenJDK社区的长期支持，LTS版本将是可以放心选择的版本。由于JDK9和JDK10都是一个过渡版本，JDK11的特性是在JDK9中就有的，我在博客里也做了总结&lt;a href=&quot;https://zouchanglin.cn/2020/04/15/JDK9新特性(一)&quot;&gt;《 JDK9新特性(一)》&lt;/a&gt;， &lt;a href=&quot;https://zouchanglin.cn/2020/04/16/JDK9新特性(二)&quot;&gt;《JDK9新特性(二)》&lt;/a&gt; ，其中已经介绍过的新特性将不会在这篇文章出现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://zouchanglin.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="JavaSE" scheme="https://zouchanglin.cn/tags/JavaSE/"/>
+    
+      <category term="GC" scheme="https://zouchanglin.cn/tags/GC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDK9新特性(二)</title>
+    <link href="https://zouchanglin.cn/2020/04/16/JDK9%E6%96%B0%E7%89%B9%E6%80%A7(%E4%BA%8C)/"/>
+    <id>https://zouchanglin.cn/2020/04/16/JDK9%E6%96%B0%E7%89%B9%E6%80%A7(%E4%BA%8C)/</id>
+    <published>2020-04-16T10:00:00.000Z</published>
+    <updated>2020-04-19T12:09:02.919Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在上一篇的文章我记述了JDK9的两个最重要的特性：一个是模块化，一个是jShell。另外就是String底层存储结构和StreamAPI的一些改动与优化。本次要记述主要的特性是全新的多分辨率图像API、全新的HTTP客户端API（其实是借鉴OkHTTP的框架，或者说是整合吧）、Deprecated相关API、智能Java编译工具与动态编译器、统一的JVM日志系统、javadoc对H5的支持、JavaScript引擎升级：Nashorn。然后再谈谈JDK9还需要什么吧，也就是对未来Java的展望。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://zouchanglin.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="JavaSE" scheme="https://zouchanglin.cn/tags/JavaSE/"/>
+    
+      <category term="模块化" scheme="https://zouchanglin.cn/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+      <category term="交互式" scheme="https://zouchanglin.cn/tags/%E4%BA%A4%E4%BA%92%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDK9新特性(一)</title>
+    <link href="https://zouchanglin.cn/2020/04/15/JDK9%E6%96%B0%E7%89%B9%E6%80%A7(%E4%B8%80)/"/>
+    <id>https://zouchanglin.cn/2020/04/15/JDK9%E6%96%B0%E7%89%B9%E6%80%A7(%E4%B8%80)/</id>
+    <published>2020-04-15T10:00:00.000Z</published>
+    <updated>2020-04-20T03:26:49.452Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java8在2014年3月份推出的，而历经曲折的Java9终于终于在2017年9月21日发布，中间历经3年多时间，Java9提供了超过150项新功能特性，包括备受期待的模块化系统、可交互的 REPL 工具：jshell，JDK 编译工具，Java 公共 API 和私有代码，以及安全增强、扩展提升、性能管理改善等。可以说Java 9是一个庞大的系统工程，完全做了一个整体改变。Java8中最核心的新特性就是Lambda表达式和Stream API，那么对于Java9来说其中最核心莫过于模块化系统和JShell命令。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://zouchanglin.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="JavaSE" scheme="https://zouchanglin.cn/tags/JavaSE/"/>
+    
+      <category term="模块化" scheme="https://zouchanglin.cn/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+      <category term="交互式" scheme="https://zouchanglin.cn/tags/%E4%BA%A4%E4%BA%92%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDK8新特性</title>
+    <link href="https://zouchanglin.cn/2020/04/14/JDK8%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    <id>https://zouchanglin.cn/2020/04/14/JDK8%E6%96%B0%E7%89%B9%E6%80%A7/</id>
+    <published>2020-04-14T10:00:00.000Z</published>
+    <updated>2020-04-17T04:07:16.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;虽然已经用过了一些Java8的新特性，但是总来没有仔细总结一下。Java8自从2014年就发布了，到目前为止只有一小部分公司在用JDK7及其以下的版本，大部分已经迁移至Java8，甚至Java11（关于Java9和Java11的特性我会在之后两篇文章中记述），目前只看Java8那些最主要的、也是最常用的新特性，我到目前为止用到的最多的也就是Stream API和Lambda表达式，新时间日期的API也比较常用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://zouchanglin.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="JavaSE" scheme="https://zouchanglin.cn/tags/JavaSE/"/>
+    
+      <category term="Stream" scheme="https://zouchanglin.cn/tags/Stream/"/>
+    
+      <category term="Lambda" scheme="https://zouchanglin.cn/tags/Lambda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>堆的实现及其应用</title>
+    <link href="https://zouchanglin.cn/2020/04/13/%E5%A0%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    <id>https://zouchanglin.cn/2020/04/13/%E5%A0%86%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</id>
+    <published>2020-04-13T10:00:00.000Z</published>
+    <updated>2020-04-24T05:05:12.894Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本篇文章记述的是堆排序，这个名字看起来好像又要介绍一个排序算法，但是排序算法是次要的，主要的是一个数据结构——堆。堆排序问题就是堆这种数据结构所衍生出来的一个应用，我们先了解一下优先队列的概念。普通的队列就是满足先进先出、后进后出的一个结构。那么优先级队列呢？出队顺序和入队顺序无关，和优先级相关，这就比如在医院看病，肯定是急诊病人优先看病。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据结构与算法" scheme="https://zouchanglin.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="排序算法" scheme="https://zouchanglin.cn/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="堆" scheme="https://zouchanglin.cn/tags/%E5%A0%86/"/>
+    
+      <category term="二叉树" scheme="https://zouchanglin.cn/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注解的原理与实现</title>
+    <link href="https://zouchanglin.cn/2020/04/12/%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://zouchanglin.cn/2020/04/12/%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/</id>
+    <published>2020-04-12T10:00:00.000Z</published>
+    <updated>2020-04-15T06:04:25.034Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;注解这个东西自从SpringBoot以来一直是Java开发者们必备的生存技巧呀，我们平时几乎大部分时间都是面向注解编程，通过注解我们可以节约大量的时间。用过了这么多的注解，那么我们否有关注过注解的实现原理呢？所以本篇文章主要是讲述注解的有关操作，自己实现一个注解来体会注解的实现原理，注解也不是特别高深的东西，掌握了自然就明白了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://zouchanglin.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="JavaWeb" scheme="https://zouchanglin.cn/tags/JavaWeb/"/>
+    
+      <category term="JavaSE" scheme="https://zouchanglin.cn/tags/JavaSE/"/>
+    
+      <category term="JavaEE" scheme="https://zouchanglin.cn/tags/JavaEE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于快排和归并的思考</title>
+    <link href="https://zouchanglin.cn/2020/04/11/%E5%85%B3%E4%BA%8E%E5%BF%AB%E6%8E%92%E5%92%8C%E5%BD%92%E5%B9%B6%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <id>https://zouchanglin.cn/2020/04/11/%E5%85%B3%E4%BA%8E%E5%BF%AB%E6%8E%92%E5%92%8C%E5%BD%92%E5%B9%B6%E7%9A%84%E6%80%9D%E8%80%83/</id>
+    <published>2020-04-11T10:00:00.000Z</published>
+    <updated>2020-04-14T12:01:02.853Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;归并排序和快速排序是两种稍微复杂的排序算法，它们用的都是分治的思想，代码都通过递归来实现，过程非常相似。归并排序算法是一种在任何情况下时间复杂度都比较稳定的排序算法，这也使它存在致命的缺点，即归并排序不是原地排序算法，空间复杂度比较高，是 O(n)。正因为此它也没有快排应用广泛。快速排序算法虽然最坏情况下的时间复杂度是 O(n²)，但是平均情况下时间复杂度都是 O(nlogn)。且快速排序算法时间复杂度退化到 O(n²) 的概率非常小，我们可以通过合理地选择基准值来避免这种情况。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据结构与算法" scheme="https://zouchanglin.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="排序算法" scheme="https://zouchanglin.cn/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速排序及其优化</title>
+    <link href="https://zouchanglin.cn/2020/04/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96/"/>
+    <id>https://zouchanglin.cn/2020/04/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96/</id>
+    <published>2020-04-10T10:00:00.000Z</published>
+    <updated>2020-04-14T10:06:23.620Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;快速排序(Quick Sort)被称为20世纪对世界影响最大的算法之一，现在我们来看快速排序算法，习惯性把它简称为快排，快排利用的也是分治思想。乍看起来，它有点像归并排序，但是思路其实完全不一样。现在，我们先来看下快排的核心思想，最后将讲述快速排序的两个优化方案，其实还有一种三路快排的优化方案也是可以的，但是本片文章重点在于快速排序的原理和实现，所以三路快排的优化方案不会出现在这篇文章里，以后再详细记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据结构与算法" scheme="https://zouchanglin.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="排序算法" scheme="https://zouchanglin.cn/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+</feed>
