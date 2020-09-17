@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=gb18030;">
     <link rel="stylesheet" type="text/css"
           href="css/birthday_music27b7e3.css">
-    <!--ÌáÈ¡×ÔQQÓÊÏä¹Ù·½ÓÊ¼þ
-    bug£ºÊ¹ÓÃ±¾µØÒôÆµ£¬»á³öÏÖ²¥·ÅÖÐ¶Ï
+    <!--æå–è‡ªQQé‚®ç®±å®˜æ–¹é‚®ä»¶
+    bugï¼šä½¿ç”¨æœ¬åœ°éŸ³é¢‘ï¼Œä¼šå‡ºçŽ°æ’­æ”¾ä¸­æ–­
     -->
 </head>
 <body>
@@ -76,12 +77,12 @@
                     <tr>
                         <td>
                             <div style="padding: 45px 57px; text-align: center;">
-                                <p style="margin-bottom: 6px; font-size: 14px; line-height: 1; text-align: left; font-weight: bold;" id="NickName">Hi, ÌìÃ÷</p>
+                                <p style="margin-bottom: 6px; font-size: 14px; line-height: 1; text-align: left; font-weight: bold;" id="NickName">Hi, å¤©æ˜Ž</p>
 
                                 <p style="margin-bottom: 9px; font-size: 14px; line-height: 28px; text-indent: 35px; text-align: left;">
-                                    ÓÐÐ©ÊÂÇé¿ÉÄÜÄãÒÑ¾­Íü¼Ç£¬µ«ÎÒÒÀÈ»¼ÇµÃ¡£½ñÌì
-                                    <span id="Birthday">1ÔÂ1ÈÕ</span>
-                                    ÊÇÄãµÄÉúÈÕ£¬ÎÒÕÒÁËÒ»Ð©ÈË³ªÁËÒ»Ê×¸èËÍ¸øÄã£¬Ï£ÍûËüÄÜ¸øÄã´øÀ´Ò»Ð©¾ªÏ²ºÍ»¶ÀÖ¡£Happy Birthday¡£
+                                    æœ‰äº›äº‹æƒ…å¯èƒ½ä½ å·²ç»å¿˜è®°ï¼Œä½†æˆ‘ä¾ç„¶è®°å¾—ã€‚ä»Šå¤©
+                                    <span id="Birthday">1æœˆ1æ—¥</span>
+                                    æ˜¯ä½ çš„ç”Ÿæ—¥ï¼Œæˆ‘æ‰¾äº†ä¸€äº›äººå”±äº†ä¸€é¦–æ­Œé€ç»™ä½ ï¼Œå¸Œæœ›å®ƒèƒ½ç»™ä½ å¸¦æ¥ä¸€äº›æƒŠå–œå’Œæ¬¢ä¹ã€‚Happy Birthdayã€‚
                                 </p>
 
                                 <!--<iframe src="brithday.html" width="756" height="570" frameborder="no"></iframe>-->
@@ -89,13 +90,13 @@
                                 <div id="control-container" class="birthday_wrap">
                                     <div class="birthday_errorTip">
                                         <div class="birthday_errorTip_bg"></div>
-                                        <div id="birthday_errorTip_text" class="birthday_errorTip_text">ÓÉÓÚÄãµÄä¯ÀÀÆ÷°æ±¾Ì«µÍ£¬ÔÝÊ±ÎÞ·¨²é¿´¸ÃÓÊ¼þ¡£½¨ÒéÄãÉý¼¶<br>»òÊ¹ÓÃÊÊÅä¸üºÃµÄä¯ÀÀÆ÷¡£
+                                        <div id="birthday_errorTip_text" class="birthday_errorTip_text">ç”±äºŽä½ çš„æµè§ˆå™¨ç‰ˆæœ¬å¤ªä½Žï¼Œæš‚æ—¶æ— æ³•æŸ¥çœ‹è¯¥é‚®ä»¶ã€‚å»ºè®®ä½ å‡çº§<br>æˆ–ä½¿ç”¨é€‚é…æ›´å¥½çš„æµè§ˆå™¨ã€‚
                                         </div>
                                     </div>
 
                                     <div id="welcome" class="birthday_welcome">
                                         <a id="welcome_begin" class="birthday_startBtn" href="javascript:;">
-                                            <span class="birthday_startBtn_mask">¿ªÊ¼</span>
+                                            <span class="birthday_startBtn_mask">å¼€å§‹</span>
                                         </a>
                                     </div>
 
@@ -151,7 +152,7 @@
 
 <script>
     var gBitRate = 128;
-//    Ê¹ÓÃ±¾µØÒôÆµ£¬²»ÄÜÁ¬Ðø²¥·Å
+//    ä½¿ç”¨æœ¬åœ°éŸ³é¢‘ï¼Œä¸èƒ½è¿žç»­æ’­æ”¾
     var getMusicPath = function (music) {
         if (gBitRate == 32) {
             return ['https://res.mail.qq.com/zh_CN/htmledition/audio/birthday_music_32/combine_', music, musicSuffix[music], '.mp3'].join('');
@@ -351,7 +352,7 @@
         <div id="singers" class="birthday_singers">
             <div class="birthday_singerItem birthday_singerItemJianjian">
                 <div class="birthday_singerItem_cnt" singer="0">
-                    <div class="birthday_singerItem_introTip" originhtml="ÎÒÊÇ½¡½¡">ÎÒÊÇ½¡½¡</div>
+                    <div class="birthday_singerItem_introTip" originhtml="æˆ‘æ˜¯å¥å¥">æˆ‘æ˜¯å¥å¥</div>
                     <div class="birthday_singerItem_character"></div>
                     <div class="birthday_singerItem_characterStage">
                         <div class="birthday_singerItem_characterStage_mouth"></div>
@@ -361,7 +362,7 @@
             </div>
             <div class="birthday_singerItem birthday_singerItem_Tutu">
                 <div class="birthday_singerItem_cnt" singer="1">
-                    <div class="birthday_singerItem_introTip" originhtml="ÎÒÊÇ¿µ¿µ">ÎÒÊÇ¿µ¿µ</div>
+                    <div class="birthday_singerItem_introTip" originhtml="æˆ‘æ˜¯åº·åº·">æˆ‘æ˜¯åº·åº·</div>
                     <div class="birthday_singerItem_character"></div>
                     <div class="birthday_singerItem_characterStage">
                         <div class="birthday_singerItem_characterStage_mouth"></div>
@@ -371,7 +372,7 @@
             </div>
             <div class="birthday_singerItem birthday_singerItem_Bobo">
                 <div class="birthday_singerItem_cnt" singer="2">
-                    <div class="birthday_singerItem_introTip" originhtml="ÎÒÊÇ°²°²">ÎÒÊÇ°²°²</div>
+                    <div class="birthday_singerItem_introTip" originhtml="æˆ‘æ˜¯å®‰å®‰">æˆ‘æ˜¯å®‰å®‰</div>
                     <div class="birthday_singerItem_character"></div>
                     <div class="birthday_singerItem_characterStage">
                         <div class="birthday_singerItem_characterStage_mouth"></div>
@@ -381,7 +382,7 @@
             </div>
             <div class="birthday_singerItem birthday_singerItem_Xixi">
                 <div class="birthday_singerItem_cnt birthday_singerItem_cnt_Active" singer="3">
-                    <div class="birthday_singerItem_introTip" originhtml="ÎÒÊÇÆ½Æ½">ÎÒÊÇÆ½Æ½</div>
+                    <div class="birthday_singerItem_introTip" originhtml="æˆ‘æ˜¯å¹³å¹³">æˆ‘æ˜¯å¹³å¹³</div>
                     <div class="birthday_singerItem_character"></div>
                     <div class="birthday_singerItem_characterStage">
                         <div class="birthday_singerItem_characterStage_mouth"></div>
@@ -391,7 +392,7 @@
             </div>
             <div class="birthday_singerItem birthday_singerItem_Jiji">
                 <div class="birthday_singerItem_cnt" singer="4">
-                    <div class="birthday_singerItem_introTip" originhtml="ÎÒÊÇ¼ª¼ª">ÎÒÊÇ¼ª¼ª</div>
+                    <div class="birthday_singerItem_introTip" originhtml="æˆ‘æ˜¯å‰å‰">æˆ‘æ˜¯å‰å‰</div>
                     <div class="birthday_singerItem_character"></div>
                     <div class="birthday_singerItem_characterStage">
                         <div class="birthday_singerItem_characterStage_mouth"></div>
@@ -401,7 +402,7 @@
             </div>
             <div class="birthday_singerItem birthday_singerItem_Ivy">
                 <div class="birthday_singerItem_cnt" singer="5">
-                    <div class="birthday_singerItem_introTip" originhtml="ÎÒÊÇÀÖÀÖ">ÎÒÊÇÀÖÀÖ</div>
+                    <div class="birthday_singerItem_introTip" originhtml="æˆ‘æ˜¯ä¹ä¹">æˆ‘æ˜¯ä¹ä¹</div>
                     <div class="birthday_singerItem_character"></div>
                     <div class="birthday_singerItem_characterStage">
                         <div class="birthday_singerItem_characterStage_mouth"></div>
@@ -413,15 +414,15 @@
         <a id="pause-btn" class="birthday_stage_pauseBtn" href="javascript:;"></a>
         <a id="sound-btn" class="birthday_stage_soundBtn" href="javascript:;"></a>
 
-        <div id="sound-tip" class="birthday_stage_soundTip">Çë¿ªÆôµçÄÔÉùÒôÅ¶!</div>
+        <div id="sound-tip" class="birthday_stage_soundTip">è¯·å¼€å¯ç”µè„‘å£°éŸ³å“¦!</div>
     </div>
 </script>
 <script src="js/birthday_music27b7cd.js"></script>
 <script type="text/javascript">
-    // Ãû³Æ
-    document.getElementById("NickName").innerHTML = 'Hi, Ð¡½ã½ã';
+    // åç§°
+    document.getElementById("NickName").innerHTML = 'Hi, å°å§å§';
     // Birthday
-    document.getElementById("Birthday").innerHTML = '1ÔÂ1ÈÕ';
+    document.getElementById("Birthday").innerHTML = '1æœˆ1æ—¥';
 </script>
 <!--<script src="https://rescdn.qqmail.com/zh_CN/htmledition/js/webp/birthday_music/birthday_music27b7cd.js"></script>-->
 </body>
