@@ -1,0 +1,749 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    outline: none;
+    -webkit-text-size-adjust: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+.birthday_wrap {
+    position: relative;
+    width: 756px;
+    height: 524px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    font-family: "lucida Grande", Verdana, "Microsoft YaHei";
+    text-align: left;
+}
+
+.birthday_errorTip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    width: 100%;
+    height: 100%;
+    *zoom: 1;
+}
+
+.birthday_errorTip_bg {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+
+.birthday_errorTip_text {
+    position: absolute;
+    top: 254px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.birthday_errorTip_text a {
+    color: #11a8f3;
+}
+
+.birthday_errorTip_UpgradeBrowser .birthday_errorTip_text {
+    top: 246px;
+}
+
+.birthday_welcome {
+    position: absolute;
+    top: 0;
+    z-index: 80;
+    width: 100%;
+    height: 100%;
+    background: url(../images/birthday_bgStart2767c8.jpg) no-repeat;
+    /*background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/birthday_bgStart2767c8.jpg) no-repeat;*/
+}
+
+.birthday_startBtn {
+    position: absolute;
+    top: 268px;
+    left: 322px;
+    width: 127px;
+    height: 48px;
+    padding-top: 4px;
+    background-color: #1ebd96;
+    border-radius: 4px;
+}
+
+.birthday_startBtn_mask {
+    display: block;
+    height: 48px;
+    background-color: #1eac89;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.birthday_startBtn:hover {
+    text-decoration: none;
+}
+
+.birthday_loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #0b1e3e;
+    text-align: center;
+}
+
+.birthday_loading_icon {
+    width: 39px;
+    height: 34px;
+    margin: 163px auto 7px;
+    background: url(../images/birthday_controlSprite27b05f.png) no-repeat -112px -176px;
+}
+
+@-webkit-keyframes loadingPointAnimation {
+    from {
+        width: 66px;
+    }
+    to {
+        width: 95px;
+    }
+}
+
+.birthday_loading_textWrap {
+    position: relative;
+    margin-bottom: 37px;
+    height: 17px;
+}
+
+.birthday_loading_text {
+    position: absolute;
+    left: 344px;
+    top: 0;
+    width: 95px;
+    height: 17px;
+    background: url(../images/birthday_controlSprite27b05f.png) no-repeat 0 -288px;
+    animation: loadingPointAnimation 6s steps(6) infinite;
+}
+
+.birthday_loading_process {
+    position: relative;
+    width: 571px;
+    height: 11px;
+    margin: 0 auto;
+    background-color: #fff0be;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.birthday_loading_current {
+    position: relative;
+    height: 100%;
+    width: 0;
+    background: #ff3b72 url(../images/birthday_loading_bg2767c8.png) repeat-x;
+    border-radius: 5px;
+}
+
+.birthday_loading_current_point {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.birthday_loading_current_text {
+    position: absolute;
+    top: -34px;
+    right: -23px;
+    width: 43px;
+    height: 27px;
+    background-color: #9ffff5;
+    border-radius: 4px;
+    color: #133f89;
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    line-height: 27px;
+    text-align: center;
+    cursor: default;
+}
+
+.MacOS .birthday_loading_current_text {
+    line-height: 30px;
+}
+
+.birthday_loading_current_text_percent {
+    padding-left: 1px;
+    font-size: 13px;
+}
+
+.birthday_loading_current_text_arrow {
+    position: absolute;
+    left: 7px;
+    top: 27px;
+    border-width: 6px 7px 0;
+    border-style: solid;
+    border-color: #9ffff5 transparent transparent;
+    font-size: 0;
+    line-height: 0;
+    _border-color: red;
+    _border-top-color: #9ffff5;
+    _filter: chroma(color=red);
+}
+
+.birthday_stage {
+    width: 100%;
+    height: 100%;
+    background: url(../images/birthday_bgStage2767c8.jpg) no-repeat;
+    z-index: 10;
+}
+
+.birthday_stage_soundBtn {
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    width: 47px;
+    height: 36px;
+    background: url(../images/birthday_controlSprite27b05f.png) no-repeat 0 -64px;
+}
+
+.birthday_stage_soundBtn_Close {
+    background-position: 0 0;
+}
+
+.birthday_stage_soundTip {
+    position: absolute;
+    top: 73px;
+    right: 33px;
+    height: 40px;
+    padding: 0 16px;
+    background-color: #2e72e4;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.birthday_stage_pauseBtn {
+    position: absolute;
+    bottom: 22px;
+    right: 28px;
+    z-index: 10;
+    width: 47px;
+    height: 47px;
+    background: url(../images/birthday_controlSprite27b05f.png) no-repeat -112px -240px;
+}
+
+.birthday_stage_pauseBtn_Play {
+    background-position: -112px -304px;
+}
+
+.birthday_stage_lightFirst {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 757px;
+    height: 527px;
+    background: url(../images/birthday_lightFirst2767c8.png);
+}
+
+.birthday_stage_lightSecond {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 757px;
+    height: 527px;
+    background: url(../images/birthday_lightSecond2767c8.png);
+}
+
+.birthday_singers {
+    position: absolute;
+    top: 112px;
+    left: 70px;
+    z-index: 10;
+}
+
+.birthday_singerItem {
+    position: absolute;
+    z-index: 2;
+    height: 292px;
+}
+
+.birthday_singerItem_cnt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.birthday_singerItem_introTip {
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    display: none;
+    width: 75px;
+    height: 48px;
+    width: 83px \9;
+    height: 56px \9;
+    padding: 8px 4px 0;
+    padding: 8px 0 0 \9;
+    background: url(../images/birthday_controlSprite27b05f.png) no-repeat 0 -160px;
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.birthday_singerItem_character, .birthday_singerItem_characterStage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/character276e40.png) no-repeat;
+    cursor: pointer;
+}
+
+.birthday_singerItem_characterStage {
+    top: 6px;
+    display: none;
+}
+
+.birthday_singerItem_characterStage_mouth {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.birthday_singerItem_characterStage_mouth_Open {
+    background-position-y: -292px;
+}
+
+.birthday_singerItem_mic {
+    position: absolute;
+    left: 0;
+    display: none;
+    width: 32px;
+    height: 153px;
+    background: url(../images/birthday_controlSprite27b05f.png) no-repeat -112px 0;
+    cursor: pointer;
+}
+
+.birthday_singerItemJianjian {
+    left: 21px;
+    top: 29px;
+    width: 159px;
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_characterStage {
+    background-image: url(../images/character/yudong_animation2767c8.png);
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_characterStage_mouth {
+    background-image: url(../images/character/yudong_mouth2767c8.png);
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_mic {
+    left: 40px;
+    bottom: -13px;
+}
+
+.birthday_singerItem_Tutu {
+    width: 114px;
+    left: 236px;
+    top: 7px;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_introTip {
+    top: -60px;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_character {
+    background-position: -317px 0;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_characterStage {
+    background-image: url(../images/character/tutu_animation2767c8.png);
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_characterStage_mouth {
+    background-image: url(../images/character/tutu_mouth2767c8.png);
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_mic {
+    left: 28px;
+    bottom: -37px;
+}
+
+.birthday_singerItem_Bobo {
+    width: 118px;
+    left: 422px;
+    top: 19px;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_character {
+    background-position: -545px 0;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_characterStage {
+    background-image: url(../images/character/bobo_animation2767c8.png);
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_characterStage_mouth {
+    background-image: url(../images/character/bobo_mouth2767c8.png);
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_mic {
+    left: 34px;
+    bottom: -25px;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_introTip {
+    top: -41px;
+}
+
+.birthday_singerItem_Xixi {
+    width: 111px;
+    left: 331px;
+    top: 30px;
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_character {
+    background-position: -780px 0;
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_characterStage {
+    background-image: url(../images/character/xixi_animation2767c8.png);
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_characterStage_mouth {
+    background-image: url(../images/character/xixi_mouth2767c8.png);
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_mic {
+    left: 39px;
+    bottom: -14px;
+}
+
+.birthday_singerItem_Jiji {
+    width: 105px;
+    left: 143px;
+    top: 35px;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_character {
+    background-position: -1003px 0;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_characterStage {
+    background-image: url(../images/character/terry_animation2767c8.png);
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_characterStage_mouth {
+    background-image: url(../images/character/terry_mouth2767c8.png);
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_mic {
+    left: 37px;
+    bottom: -8px;
+}
+
+.birthday_singerItem_Ivy {
+    width: 112px;
+    left: 502px;
+    top: 35px;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_introTip {
+    top: -28px;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_character {
+    background-position: -1213px 0;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_characterStage {
+    background-image: url(../images/character/ivy_animation2767c8.png);
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_characterStage_mouth {
+    background-image: url(../images/character/ivy_mouth2767c8.png);
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_mic {
+    left: 43px;
+    bottom: -9px;
+}
+
+.birthday_singerItem_cnt_Active .birthday_singerItem_characterStage, .birthday_singerItem_cnt_Active .birthday_singerItem_mic {
+    display: block;
+}
+
+.birthday_singerItem_cnt_Active .birthday_singerItem_character {
+    display: none;
+}
+
+.birthday_singerItem_cnt_Active .birthday_singerItem_character {
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_cnt_Active {
+    left: -3px;
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_cnt_Active .birthday_singerItem_introTip {
+    top: -15px;
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_cnt_Active .birthday_singerItem_characterStage {
+    top: 20px;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_cnt_Active {
+    left: 6px;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_cnt_Active .birthday_singerItem_introTip {
+    top: -33px;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_cnt_Active .birthday_singerItem_characterStage {
+    top: 21px;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_cnt_Active {
+    left: 4px;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_cnt_Active .birthday_singerItem_introTip {
+    top: -14px;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_cnt_Active .birthday_singerItem_characterStage {
+    top: 11px;
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_cnt_Active .birthday_singerItem_introTip {
+    top: -9px;
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_cnt_Active .birthday_singerItem_characterStage {
+    top: 0;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_cnt_Active {
+    left: -6px;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_cnt_Active .birthday_singerItem_introTip {
+    top: -12px;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_cnt_Active .birthday_singerItem_characterStage {
+    top: -7px;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_cnt_Active {
+    left: 7px;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_cnt_Active .birthday_singerItem_introTip {
+    top: -3px;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_cnt_Active .birthday_singerItem_characterStage {
+    top: -5px;
+}
+
+.birthday_singerItem_cnt_Light .birthday_singerItem_introTip {
+    display: block;
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_cnt_Light .birthday_singerItem_character {
+    background-position: -159px 0;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_cnt_Light .birthday_singerItem_character {
+    background-position: -432px 0;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_cnt_Light .birthday_singerItem_character {
+    background-position: -663px 0;
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_cnt_Light .birthday_singerItem_character {
+    background-position: -892px 0;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_cnt_Light .birthday_singerItem_character {
+    background-position: -1108px 0;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_cnt_Light .birthday_singerItem_character {
+    background-position: -1325px 0;
+}
+
+.birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    display: block;
+}
+
+.birthday_singerItemJianjian .birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    left: -4px;
+    top: 22px;
+}
+
+.birthday_singerItem_Tutu .birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    top: 14px;
+    left: -11px;
+}
+
+.birthday_singerItem_Bobo .birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    left: 0;
+    top: 32px;
+}
+
+.birthday_singerItem_Xixi .birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    top: 38px;
+    left: -7px;
+}
+
+.birthday_singerItem_Jiji .birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    top: 31px;
+    left: -4px;
+}
+
+.birthday_singerItem_Ivy .birthday_singerItem_cnt_Pause .birthday_singerItem_character {
+    top: 29px;
+    left: -6px;
+}
+
+.birthday_singerItem_cnt_Pause .birthday_singerItem_characterStage {
+    display: none;
+}
+
+.birthday_foot {
+    height: 26px;
+    text-align: right;
+}
+
+.birthday_foot_logo {
+    width: 128px;
+    height: 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    .birthday_loading_current {
+        background-image: -webkit-image-set(url(../images/birthday_loading_bg2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/birthday_loading_bg_2x2767c8.png) 2x);
+    }
+
+    .birthday_welcome {
+        background-image: -webkit-image-set(url(../images/birthday_bgStart2767c8.jpg) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/birthday_bgStart_2x2767c8.jpg) 2x);
+    }
+
+    .birthday_stage {
+        background-image: -webkit-image-set(url(../images/birthday_bgStage2767c8.jpg) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/birthday_bgStage_2x2767c8.jpg) 2x);
+    }
+
+    .birthday_stage_lightFirst {
+        background-image: -webkit-image-set(url(../images/birthday_lightFirst2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/birthday_lightFirst_2x2767c8.png) 2x);
+    }
+
+    .birthday_stage_lightSecond {
+        background-image: -webkit-image-set(url(../images/birthday_lightSecond2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/birthday_lightSecond_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_character {
+        background-image: -webkit-image-set(url(../images/character276e40.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/character_2x276e40.png) 2x);
+    }
+
+    .birthday_singerItemJianjian .birthday_singerItem_characterStage {
+        background-image: -webkit-image-set(url(../images/character/yudong_animation2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/yudong_animation_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItemJianjian .birthday_singerItem_characterStage_mouth {
+        background-image: -webkit-image-set(url(../images/character/yudong_mouth2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/yudong_mouth_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Tutu .birthday_singerItem_characterStage {
+        background-image: -webkit-image-set(url(../images/character/tutu_animation2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/tutu_animation_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Tutu .birthday_singerItem_characterStage_mouth {
+        background-image: -webkit-image-set(url(../images/character/tutu_mouth2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/tutu_mouth_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Bobo .birthday_singerItem_characterStage {
+        background-image: -webkit-image-set(url(../images/character/bobo_animation2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/bobo_animation_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Bobo .birthday_singerItem_characterStage_mouth {
+        background-image: -webkit-image-set(url(../images/character/bobo_mouth2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/bobo_mouth_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Xixi .birthday_singerItem_characterStage {
+        background-image: -webkit-image-set(url(../images/character/xixi_animation2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/xixi_animation_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Xixi .birthday_singerItem_characterStage_mouth {
+        background-image: -webkit-image-set(url(../images/character/xixi_mouth2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/xixi_mouth_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Jiji .birthday_singerItem_characterStage {
+        background-image: -webkit-image-set(url(../images/character/terry_animation2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/terry_animation_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Jiji .birthday_singerItem_characterStage_mouth {
+        background-image: -webkit-image-set(url(../images/character/terry_mouth2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/terry_mouth_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Ivy .birthday_singerItem_characterStage {
+        background-image: -webkit-image-set(url(../images/character/ivy_animation2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/ivy_animation_2x2767c8.png) 2x);
+    }
+
+    .birthday_singerItem_Ivy .birthday_singerItem_characterStage_mouth {
+        background-image: -webkit-image-set(url(../images/character/ivy_mouth2767c8.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/character/ivy_mouth_2x2767c8.png) 2x);
+    }
+
+    .birthday_loading_icon, .birthday_loading_text, .birthday_stage_soundBtn, .birthday_stage_pauseBtn, .birthday_singerItem_cnt_Active .birthday_singerItem_mic, .birthday_singerItem_introTip {
+        background-image: -webkit-image-set(url(../images/birthday_controlSprite27b05f.png) 1x, url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/birthday_music/birthday_controlSprite_2x27b05f.png) 2x);
+    }
+
+    /*.birthday_foot_logo {*/
+        /*content: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/letter/birthday_music/bottom_logo_2x279473.png);*/
+    /*}*/
+}

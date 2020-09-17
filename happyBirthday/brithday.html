@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb18030;">
+    <link rel="stylesheet" type="text/css"
+          href="css/birthday_music27b7e3.css">
+    <!--提取自QQ邮箱官方邮件
+    bug：使用本地音频，会出现播放中断
+    -->
+</head>
+<body>
+<script>
+    var beforeLoadImg = +new Date();
+    var testImgTimeUse = -1;
+    function onTestImgOnload() {
+        testImgTimeUse = +new Date() - beforeLoadImg;
+    }
+</script>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .birthday_wrap {
+        background: url(images/bg_cnt.jpg) 0 0 repeat-y;
+    }
+
+    .birthday_wrap_bgTop {
+        background: url(images/bg_top.jpg) 0 0 no-repeat;
+    }
+
+    .birthday_wrap_bgBottom {
+        background: url(images/bg_bottom.jpg) 0 bottom no-repeat;
+    }
+
+    #notWebmail .table_wrap {
+        max-width: 600px;
+    }
+
+    @media only screen and (min-width: 320px) {
+        .birthday_mobile_img {
+            min-height: 142px;
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+        .birthday_wrap {
+            background-image: -webkit-image-set(url(images/bg_cnt.jpg) 1x, url(images/bg_cnt_2x.jpg) 2x);
+        }
+
+        .birthday_wrap_bgTop {
+            background-image: -webkit-image-set(url(images/bg_top.jpg) 1x, url(images/bg_top_2x.jpg) 2x);
+        }
+
+        .birthday_wrap_bgBottom {
+            background-image: -webkit-image-set(url(images/bg_bottom.jpg) 1x, url(images/bg_bottom_2x.jpg) 2x);
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        .birthday_mobile_img {
+            content: url('images/mobile_stage_3x.png');
+        }
+    }
+</style>
+<!--<img src="/zh_CN/htmledition/audio/test/5K27b064.jpg?r=38279133" onload="onTestImgOnload();"-->
+<!--style="position:absolute; top:-10000px; left:-10000px;">-->
+<!---->
+<div id="webmail" style="padding: 33px 0px 45px; background-color: rgb(255, 231, 231);">
+    <div class="birthday_wrap" style="width: 874px; height: 734px; margin:0 auto;overflow:hidden; font-size:14px; line-height: 1;">
+        <div class="birthday_wrap_bgTop" style="height: 100%;">
+            <div class="birthday_wrap_bgBottom" style="height: 100%;">
+                <table width="874" cellpadding="0" align="left" style="margin:0 auto;overflow:hidden;text-align:left;font-size:14px;font-family:'lucida Grande',Verdana;line-height:1.5;border-collapse:collapse;" class="table_wrap">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div style="padding: 45px 57px; text-align: center;">
+                                <p style="margin-bottom: 6px; font-size: 14px; line-height: 1; text-align: left; font-weight: bold;" id="NickName">Hi, 天明</p>
+
+                                <p style="margin-bottom: 9px; font-size: 14px; line-height: 28px; text-indent: 35px; text-align: left;">
+                                    有些事情可能你已经忘记，但我依然记得。今天
+                                    <span id="Birthday">1月1日</span>
+                                    是你的生日，我找了一些人唱了一首歌送给你，希望它能给你带来一些惊喜和欢乐。Happy Birthday。
+                                </p>
+
+                                <!--<iframe src="brithday.html" width="756" height="570" frameborder="no"></iframe>-->
+                                <!--<script type="text/javascript" src="pushmail_cgi"></script>-->
+                                <div id="control-container" class="birthday_wrap">
+                                    <div class="birthday_errorTip">
+                                        <div class="birthday_errorTip_bg"></div>
+                                        <div id="birthday_errorTip_text" class="birthday_errorTip_text">由于你的浏览器版本太低，暂时无法查看该邮件。建议你升级<br>或使用适配更好的浏览器。
+                                        </div>
+                                    </div>
+
+                                    <div id="welcome" class="birthday_welcome">
+                                        <a id="welcome_begin" class="birthday_startBtn" href="javascript:;">
+                                            <span class="birthday_startBtn_mask">开始</span>
+                                        </a>
+                                    </div>
+
+                                    <div id="birthdayLoading" class="birthday_loading">
+                                        <div class="birthday_loading_icon"></div>
+                                        <div class="birthday_loading_textWrap">
+                                            <div class="birthday_loading_text"></div>
+                                        </div>
+                                        <div class="birthday_loading_process">
+                                            <div id="processLoading" class="birthday_loading_current">
+                                                <span class="birthday_loading_current_point"></span>
+                                                <span id="processPercent" class="birthday_loading_current_text">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="player_kernel_container1">
+                                    <div id="kernel_birthdayMusicPlayer1" class="video_content" style="position:absolute;margin-top:-10000px;">
+                                        <div class="kernel html5_kernel" style="position:absolute;width:100%;height:100%">
+                                            <video id="htmlvedioplayerbirthdayMusicPlayer1" width="100%" height="100%"
+                                                   style="position:absolute;width:100%;height:100%"></video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="player_kernel_container2">
+                                    <div id="kernel_birthdayMusicPlayer2" class="video_content" style="position:absolute;margin-top:-10000px;">
+                                        <div class="kernel html5_kernel" style="position:absolute;width:100%;height:100%">
+                                            <video id="htmlvedioplayerbirthdayMusicPlayer2" width="100%" height="100%"
+                                                   style="position:absolute;width:100%;height:100%"></video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/all4153b2.js"></script>
+<script src="js/qmtool3e58bd.js"></script>
+<script src="js/player38b933.js"></script>
+
+<!--<script src="https://rescdn.qqmail.com/zh_CN/htmledition/js/webp/all4153b2.js"></script>-->
+<!--<script src="https://rescdn.qqmail.com/zh_CN/htmledition/js/webp/qmtool3e58bd.js"></script>-->
+<!--<script src="https://rescdn.qqmail.com/zh_CN/htmledition/js/webp/qmplayer/player38b933.js"></script>-->
+
+<script>
+    var gBitRate = 128;
+//    使用本地音频，不能连续播放
+    var getMusicPath = function (music) {
+        if (gBitRate == 32) {
+            return ['https://res.mail.qq.com/zh_CN/htmledition/audio/birthday_music_32/combine_', music, musicSuffix[music], '.mp3'].join('');
+//            return ['audios/', music, musicSuffix[music], '.mp3'].join('');
+        } else if (gBitRate == 64) {
+            return ['https://res.mail.qq.com/zh_CN/htmledition/audio/birthday_music_64/combine_', music, musicSuffix[music], '.mp3'].join('');
+//            return ['audios/', music, musicSuffix[music], '.mp3'].join('');
+        } else {
+            return ['https://res.mail.qq.com/zh_CN/htmledition/audio/birthday_music/combine_', music, musicSuffix[music], '.mp3'].join('');
+
+//            return ['audios/', music, musicSuffix[music], '.mp3'].join('');
+        }
+    };
+    var musicSuffix = {
+        'BGK_AngelaK_DaXiongK_JianJianK': '',
+        'BGK_AngelaK_DaXiongK_JianJianK_TingBoK': '',
+        'BGK_AngelaK_DaXiongK_JianJianK_TingBoK_YWK': '',
+        'BGK_AngelaK_DaXiongK_JianJianK_YWK': '',
+        'BGK_AngelaK_DaXiongK_JJK_JianJianK': '',
+        'BGK_AngelaK_DaXiongK_JJK_JianJianK_TingBoK': '',
+        'BGK_AngelaK_DaXiongK_JJK_JianJianK_TingBoK_YWK': '',
+        'BGK_AngelaK_DaXiongK_JJK_JianJianK_YWK': '',
+        'BGK_AngelaK_DaXiongK_JJK': '',
+        'BGK_AngelaK_DaXiongK_JJK_TingBoK': '',
+        'BGK_AngelaK_DaXiongK_JJK_TingBoK_YWK': '',
+        'BGK_AngelaK_DaXiongK_JJK_YWK': '',
+        'BGK_AngelaK_DaXiongK': '',
+        'BGK_AngelaK_DaXiongK_TingBoK': '',
+        'BGK_AngelaK_DaXiongK_TingBoK_YWK': '',
+        'BGK_AngelaK_DaXiongK_YWK': '',
+        'BGK_AngelaK_JianJianK': '',
+        'BGK_AngelaK_JianJianK_TingBoK': '',
+        'BGK_AngelaK_JianJianK_TingBoK_YWK': '',
+        'BGK_AngelaK_JianJianK_YWK': '',
+        'BGK_AngelaK_JJK_JianJianK': '',
+        'BGK_AngelaK_JJK_JianJianK_TingBoK': '',
+        'BGK_AngelaK_JJK_JianJianK_TingBoK_YWK': '',
+        'BGK_AngelaK_JJK_JianJianK_YWK': '',
+        'BGK_AngelaK_JJK': '',
+        'BGK_AngelaK_JJK_TingBoK': '',
+        'BGK_AngelaK_JJK_TingBoK_YWK': '',
+        'BGK_AngelaK_JJK_YWK': '',
+        'BGK_AngelaK': '',
+        'BGK_AngelaK_TingBoK': '',
+        'BGK_AngelaK_TingBoK_YWK': '',
+        'BGK_AngelaK_YWK': '',
+        'BGK_DaXiongK_JianJianK': '',
+        'BGK_DaXiongK_JianJianK_TingBoK': '',
+        'BGK_DaXiongK_JianJianK_TingBoK_YWK': '',
+        'BGK_DaXiongK_JianJianK_YWK': '',
+        'BGK_DaXiongK_JJK_JianJianK': '',
+        'BGK_DaXiongK_JJK_JianJianK_TingBoK': '',
+        'BGK_DaXiongK_JJK_JianJianK_TingBoK_YWK': '',
+        'BGK_DaXiongK_JJK_JianJianK_YWK': '',
+        'BGK_DaXiongK_JJK': '',
+        'BGK_DaXiongK_JJK_TingBoK': '',
+        'BGK_DaXiongK_JJK_TingBoK_YWK': '',
+        'BGK_DaXiongK_JJK_YWK': '',
+        'BGK_DaXiongK': '',
+        'BGK_DaXiongK_TingBoK': '',
+        'BGK_DaXiongK_TingBoK_YWK': '',
+        'BGK_DaXiongK_YWK': '',
+        'BGK_JianJianK': '',
+        'BGK_JianJianK_TingBoK': '',
+        'BGK_JianJianK_TingBoK_YWK': '',
+        'BGK_JianJianK_YWK': '',
+        'BGK_JJK_JianJianK': '',
+        'BGK_JJK_JianJianK_TingBoK': '',
+        'BGK_JJK_JianJianK_TingBoK_YWK': '',
+        'BGK_JJK_JianJianK_YWK': '',
+        'BGK_JJK': '',
+        'BGK_JJK_TingBoK': '',
+        'BGK_JJK_TingBoK_YWK': '',
+        'BGK_JJK_YWK': '',
+        'BGK': '',
+        'BGK_TingBoK': '',
+        'BGK_TingBoK_YWK': '',
+        'BGK_YWK': '',
+        'BGM_AngelaM_DaXiongM_JianJianM': '',
+        'BGM_AngelaM_DaXiongM_JianJianM_TingBoM': '',
+        'BGM_AngelaM_DaXiongM_JianJianM_TingBoM_YWM': '',
+        'BGM_AngelaM_DaXiongM_JianJianM_YWM': '',
+        'BGM_AngelaM_DaXiongM_JJM_JianJianM': '',
+        'BGM_AngelaM_DaXiongM_JJM_JianJianM_TingBoM': '',
+        'BGM_AngelaM_DaXiongM_JJM_JianJianM_TingBoM_YWM': '',
+        'BGM_AngelaM_DaXiongM_JJM_JianJianM_YWM': '',
+        'BGM_AngelaM_DaXiongM_JJM': '',
+        'BGM_AngelaM_DaXiongM_JJM_TingBoM': '',
+        'BGM_AngelaM_DaXiongM_JJM_TingBoM_YWM': '',
+        'BGM_AngelaM_DaXiongM_JJM_YWM': '',
+        'BGM_AngelaM_DaXiongM': '',
+        'BGM_AngelaM_DaXiongM_TingBoM': '',
+        'BGM_AngelaM_DaXiongM_TingBoM_YWM': '',
+        'BGM_AngelaM_DaXiongM_YWM': '',
+        'BGM_AngelaM_JianJianM': '',
+        'BGM_AngelaM_JianJianM_TingBoM': '',
+        'BGM_AngelaM_JianJianM_TingBoM_YWM': '',
+        'BGM_AngelaM_JianJianM_YWM': '',
+        'BGM_AngelaM_JJM_JianJianM': '',
+        'BGM_AngelaM_JJM_JianJianM_TingBoM': '',
+        'BGM_AngelaM_JJM_JianJianM_TingBoM_YWM': '',
+        'BGM_AngelaM_JJM_JianJianM_YWM': '',
+        'BGM_AngelaM_JJM': '',
+        'BGM_AngelaM_JJM_TingBoM': '',
+        'BGM_AngelaM_JJM_TingBoM_YWM': '',
+        'BGM_AngelaM_JJM_YWM': '',
+        'BGM_AngelaM': '',
+        'BGM_AngelaM_TingBoM': '',
+        'BGM_AngelaM_TingBoM_YWM': '',
+        'BGM_AngelaM_YWM': '',
+        'BGM_DaXiongM_JianJianM': '',
+        'BGM_DaXiongM_JianJianM_TingBoM': '',
+        'BGM_DaXiongM_JianJianM_TingBoM_YWM': '',
+        'BGM_DaXiongM_JianJianM_YWM': '',
+        'BGM_DaXiongM_JJM_JianJianM': '',
+        'BGM_DaXiongM_JJM_JianJianM_TingBoM': '',
+        'BGM_DaXiongM_JJM_JianJianM_TingBoM_YWM': '',
+        'BGM_DaXiongM_JJM_JianJianM_YWM': '',
+        'BGM_DaXiongM_JJM': '',
+        'BGM_DaXiongM_JJM_TingBoM': '',
+        'BGM_DaXiongM_JJM_TingBoM_YWM': '',
+        'BGM_DaXiongM_JJM_YWM': '',
+        'BGM_DaXiongM': '',
+        'BGM_DaXiongM_TingBoM': '',
+        'BGM_DaXiongM_TingBoM_YWM': '',
+        'BGM_DaXiongM_YWM': '',
+        'BGM_JianJianM': '',
+        'BGM_JianJianM_TingBoM': '',
+        'BGM_JianJianM_TingBoM_YWM': '',
+        'BGM_JianJianM_YWM': '',
+        'BGM_JJM_JianJianM': '',
+        'BGM_JJM_JianJianM_TingBoM': '',
+        'BGM_JJM_JianJianM_TingBoM_YWM': '',
+        'BGM_JJM_JianJianM_YWM': '',
+        'BGM_JJM': '',
+        'BGM_JJM_TingBoM': '',
+        'BGM_JJM_TingBoM_YWM': '',
+        'BGM_JJM_YWM': '',
+        'BGM': '',
+        'BGM_TingBoM': '',
+        'BGM_TingBoM_YWM': '',
+        'BGM_YWM': ''
+    };
+</script>
+<script>
+    var resList = window.devicePixelRatio >= 2 ? [
+        'images/birthday_bgStage_2x2767c8.jpg',
+        'images/birthday_bgStart_2x2767c8.jpg',
+        '/birthday_controlSprite_2x27b05f.png',
+        'images/birthday_lightFirst_2x2767c8.png',
+        'images/birthday_lightSecond_2x2767c8.png',
+        'images/character/bobo_animation_2x2767c8.png',
+//        'https://rescdn.qqmail.com/zh_CN/htmledition/images/webp//birthday_music/character/bobo_animation_2x2767c8.png',
+        'images/character/bobo_mouth_2x2767c8.png',
+        'images//character_2x276e40.png',
+        'images/character/ivy_animation_2x2767c8.png',
+        'images/character/ivy_mouth_2x2767c8.png',
+        'images/character/terry_animation_2x2767c8.png',
+        'images/character/terry_mouth_2x2767c8.png',
+        'images/character/tutu_animation_2x2767c8.png',
+        'images/character/tutu_mouth_2x2767c8.png',
+        'images/character/xixi_animation_2x2767c8.png',
+        'images/character/xixi_mouth_2x2767c8.png',
+        'images/character/yudong_animation_2x2767c8.png',
+        'images/character/yudong_mouth_2x2767c8.png'
+    ] : [
+        'images/birthday_bgStage2767c8.jpg',
+        'images/birthday_bgStart2767c8.jpg',
+        'images/birthday_controlSprite27b05f.png',
+        'images/birthday_lightFirst2767c8.png',
+        'images/birthday_lightSecond2767c8.png',
+//      'https://rescdn.qqmail.com/zh_CN/htmledition/images/webp//birthday_music/birthday_bgStage2767c8.jpg',
+//        'https://rescdn.qqmail.com/zh_CN/htmledition/images/webp//birthday_music/birthday_bgStart2767c8.jpg',
+//        'https://rescdn.qqmail.com/zh_CN/htmledition/images/webp//birthday_music/birthday_controlSprite27b05f.png',
+//        'https://rescdn.qqmail.com/zh_CN/htmledition/images/webp//birthday_music/birthday_lightFirst2767c8.png',
+//        'https://rescdn.qqmail.com/zh_CN/htmledition/images/webp//birthday_music/birthday_lightSecond2767c8.png',
+        'images/character/bobo_animation2767c8.png',
+        'images/character/bobo_mouth2767c8.png',
+        'images/character276e40.png',
+        'images/character/ivy_animation2767c8.png',
+        'images/character/ivy_mouth2767c8.png',
+        'images/character/terry_animation2767c8.png',
+        'images/character/terry_mouth2767c8.png',
+        'images/character/tutu_animation2767c8.png',
+        'images/character/tutu_mouth2767c8.png',
+        'images/character/xixi_animation2767c8.png',
+        'images/character/xixi_mouth2767c8.png',
+        'images/character/yudong_animation2767c8.png',
+        'images/character/yudong_mouth2767c8.png'
+    ];
+</script>
+
+<script id="mainTemplate" type="text/template">
+    <div id="background1" class="birthday_stage">
+        <div id="light1" class="birthday_stage_lightFirst"></div>
+        <div id="light2" class="birthday_stage_lightSecond"></div>
+        <div id="singers" class="birthday_singers">
+            <div class="birthday_singerItem birthday_singerItemJianjian">
+                <div class="birthday_singerItem_cnt" singer="0">
+                    <div class="birthday_singerItem_introTip" originhtml="我是健健">我是健健</div>
+                    <div class="birthday_singerItem_character"></div>
+                    <div class="birthday_singerItem_characterStage">
+                        <div class="birthday_singerItem_characterStage_mouth"></div>
+                    </div>
+                    <div class="birthday_singerItem_mic"></div>
+                </div>
+            </div>
+            <div class="birthday_singerItem birthday_singerItem_Tutu">
+                <div class="birthday_singerItem_cnt" singer="1">
+                    <div class="birthday_singerItem_introTip" originhtml="我是康康">我是康康</div>
+                    <div class="birthday_singerItem_character"></div>
+                    <div class="birthday_singerItem_characterStage">
+                        <div class="birthday_singerItem_characterStage_mouth"></div>
+                    </div>
+                    <div class="birthday_singerItem_mic"></div>
+                </div>
+            </div>
+            <div class="birthday_singerItem birthday_singerItem_Bobo">
+                <div class="birthday_singerItem_cnt" singer="2">
+                    <div class="birthday_singerItem_introTip" originhtml="我是安安">我是安安</div>
+                    <div class="birthday_singerItem_character"></div>
+                    <div class="birthday_singerItem_characterStage">
+                        <div class="birthday_singerItem_characterStage_mouth"></div>
+                    </div>
+                    <div class="birthday_singerItem_mic"></div>
+                </div>
+            </div>
+            <div class="birthday_singerItem birthday_singerItem_Xixi">
+                <div class="birthday_singerItem_cnt birthday_singerItem_cnt_Active" singer="3">
+                    <div class="birthday_singerItem_introTip" originhtml="我是平平">我是平平</div>
+                    <div class="birthday_singerItem_character"></div>
+                    <div class="birthday_singerItem_characterStage">
+                        <div class="birthday_singerItem_characterStage_mouth"></div>
+                    </div>
+                    <div class="birthday_singerItem_mic"></div>
+                </div>
+            </div>
+            <div class="birthday_singerItem birthday_singerItem_Jiji">
+                <div class="birthday_singerItem_cnt" singer="4">
+                    <div class="birthday_singerItem_introTip" originhtml="我是吉吉">我是吉吉</div>
+                    <div class="birthday_singerItem_character"></div>
+                    <div class="birthday_singerItem_characterStage">
+                        <div class="birthday_singerItem_characterStage_mouth"></div>
+                    </div>
+                    <div class="birthday_singerItem_mic"></div>
+                </div>
+            </div>
+            <div class="birthday_singerItem birthday_singerItem_Ivy">
+                <div class="birthday_singerItem_cnt" singer="5">
+                    <div class="birthday_singerItem_introTip" originhtml="我是乐乐">我是乐乐</div>
+                    <div class="birthday_singerItem_character"></div>
+                    <div class="birthday_singerItem_characterStage">
+                        <div class="birthday_singerItem_characterStage_mouth"></div>
+                    </div>
+                    <div class="birthday_singerItem_mic"></div>
+                </div>
+            </div>
+        </div>
+        <a id="pause-btn" class="birthday_stage_pauseBtn" href="javascript:;"></a>
+        <a id="sound-btn" class="birthday_stage_soundBtn" href="javascript:;"></a>
+
+        <div id="sound-tip" class="birthday_stage_soundTip">请开启电脑声音哦!</div>
+    </div>
+</script>
+<script src="js/birthday_music27b7cd.js"></script>
+<script type="text/javascript">
+    // 名称
+    document.getElementById("NickName").innerHTML = 'Hi, 小姐姐';
+    // Birthday
+    document.getElementById("Birthday").innerHTML = '1月1日';
+</script>
+<!--<script src="https://rescdn.qqmail.com/zh_CN/htmledition/js/webp/birthday_music/birthday_music27b7cd.js"></script>-->
+</body>
+</html>
