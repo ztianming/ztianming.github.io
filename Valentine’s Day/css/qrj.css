@@ -1,0 +1,175 @@
+@charset "utf-8";
+a,span {
+    text-decoration: none;
+    font: 24px 微软雅黑,Verdana
+}
+
+.clearfix:after {
+	visibility: hidden;
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both
+}
+
+.clearfix {
+	zoom: 1
+}
+
+ 
+.heart-vt{
+	left: 50%;
+	height: 100%;
+	position: absolute
+}
+
+.view-top {
+	width:800px;
+	height: 420px;
+	position: relative;
+	background: #ffd1d6;
+	overflow: hidden
+}
+
+.heart-vt{
+	width: 800px;
+	top: 0;
+	margin-left: -200px;
+	overflow: hidden
+	z-index: 3
+}
+
+#valentine,#valentine .shake {
+	height: 0;
+	top: 0;
+	position: absolute
+}
+
+#valentine {
+	display: none;
+	z-index: 100;
+	width: 400px;
+	left: 0;
+	left: 145px\9;
+	*left: 145px;
+	_left: 145px
+}
+
+@keyframes shake {
+	from {
+		transform: rotate(15deg)
+	}
+
+	to {
+		transform: rotate(-15deg)
+	}
+}
+
+@keyframes shake-reverse {
+	from {
+		transform: rotate(-15deg)
+	}
+
+	to {
+		transform: rotate(15deg)
+	}
+}
+
+#valentine .shake {
+	width: 240px;
+	z-index: 20;
+	left: 100px;
+	animation-name: shake;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(.6,0,.3,1);
+	animation-direction: alternate;
+	transform-origin: top center
+}
+
+#valentine .shake .rope {
+	position: absolute;
+	width: 2px;
+	left: 105px;
+	top: -10px;
+	background-color: #FF2128
+}
+
+#valentine .shake .heart-wrap {
+	position: absolute;
+	width: 235px;
+	height: 225px
+}
+
+#valentine .heart-wrap .heart {
+	display: block;
+	position: relative;
+	width: 235px;
+	height: 225px
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(0);
+		opacity: 1
+	}
+
+	40% {
+		opacity: .8
+	}
+
+	80% {
+		transform: scale(1);
+		opacity: .5
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0
+	}
+}
+
+#valentine .heart-wrap .beat {
+	position: absolute;
+	top: 25px;
+	left: 130px;
+	animation-name: beat;
+	animation-duration: 1.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	transform-origin: bottom center
+}
+
+#valentine .tiny {
+	position: relative;
+	width: 0;
+	height: 0;
+	top: 0;
+	left: 200px;
+	z-index: 1
+}
+
+#valentine .close,#valentine .tiny img {
+	position: absolute
+}
+
+#valentine .close {
+	display: none;
+	top: 260px;
+	right: -20px;
+	width: 36px;
+	height: 36px;
+	background: #888;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 36px;
+	color: #FFF;
+	font-size: 32px;
+	font-family: 'Times New Roman';
+	cursor: pointer;
+	text-decoration: none
+}
+
+#valentine .close:hover {
+	background: #666
+}
